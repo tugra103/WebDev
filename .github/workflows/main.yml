@@ -20,7 +20,7 @@ jobs:
           git pull
           # Eğer klasör yoksa oluştur, varsa geç
           if [ ! -d "my-app" ]; then
-            npx create-next-app@latest . --yes
+            npx create-next-app@latest . --yes --force
           fi
           ls -la my-app
       - name: Commit and push changes
