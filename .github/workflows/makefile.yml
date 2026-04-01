@@ -19,7 +19,7 @@ jobs:
         run: |
           # Eğer klasör yoksa oluştur, varsa geç
           if [ ! -d "my-app" ]; then
-            npx create-next-app@latest my-app --yes
+            npx create-next-app@latest . --yes
           fi
           ls -la my-app
 
