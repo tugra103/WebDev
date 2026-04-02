@@ -18,7 +18,7 @@ jobs:
 
       - name: İnstall React Bootstrap
         run: |
-          npm i @material-tailwind/react
+          npm install primereact
 
       - name: Commit and push changes
         run: |
