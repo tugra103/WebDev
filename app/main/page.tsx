@@ -1,4 +1,4 @@
-
+"use client";
 import React from 'react';
 import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
