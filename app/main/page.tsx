@@ -86,7 +86,7 @@ export default function TemplateDemo() {
     );
 
     return (
-        <div className="card">
+        <div className="card" st>
             <Menubar model={items} start={start} end={end} />
         </div>
     )
