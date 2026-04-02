@@ -8,7 +8,7 @@ import { Avatar } from 'primereact/avatar';
 
 export default function TemplateDemo() {
     const itemRenderer = (item:any) => (
-        <a className="flex align-items-center p-menuitem-link">
+        <a className="flex align-items-center p-menuitem-link gap-2">
             <span className={item.icon} />
             <span className="mx-2">{item.label}</span>
             {item.badge && <Badge className="ml-auto" value={item.badge} />}
@@ -77,7 +77,7 @@ export default function TemplateDemo() {
         }
     ];
 
-    const start = <img alt="logo" src="https://primefaces.org/cdn/primereact/images/logo.png" height="40" className="mr-2"></img>;
+    const start = <img alt="logo" src="https://primefaces.org/cdn/primereact/images/logo.png" className="mr-2"></img>;
     const end = (
         <div className="flex align-items-center gap-2">
             <InputText placeholder="Search" type="text" className="w-8rem sm:w-auto" />
@@ -87,7 +87,7 @@ export default function TemplateDemo() {
 
     return (
         <div className="card">
-            <Menubar model={items} start={start} end={end} className="shadow-md rounded-md h-12 gap-2" />
+            <Menubar model={items} start={start} end={end} className="shadow-md rounded-md h-12" />
         </div>
     )
 }
