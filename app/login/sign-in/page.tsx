@@ -1,8 +1,6 @@
 "use client"
 import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card' 
+import { Card} from 'primereact/card' 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const auth = getAuth();
@@ -55,11 +53,8 @@ export default function SignIn() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-purple-50/30 p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-center text-2xl">Sign In</CardTitle>
-        </CardHeader>
-        <CardContent>
+      <Card className="w-full max-w-md"
+            title="Sign In">
           <form
             onSubmit={(e) => {
               e.preventDefault()
@@ -104,7 +99,6 @@ export default function SignIn() {
               {isSubmitting ? 'Signing In...' : 'Sign In'}
             </Button>
           </form>
-        </CardContent>
       </Card>
     </div>
   )
