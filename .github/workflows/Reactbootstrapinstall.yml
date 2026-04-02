@@ -1,4 +1,4 @@
-name: Create Next.js App Safely
+name: İnstall React BootStrap
 
 on:
   workflow_dispatch:
