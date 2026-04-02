@@ -18,7 +18,7 @@ jobs:
 
       - name: İnstall React Bootstrap
         run: |
-          npm install react-bootstrap bootstrap
+          npm i @material-tailwind/react
 
       - name: Commit and push changes
         run: |
