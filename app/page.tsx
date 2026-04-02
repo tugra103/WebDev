@@ -1,8 +1,5 @@
 // pages/index.tsx
 "use client";
-import { FingerprintProvider } from '@fingerprint/react'
-import {AppProps} from 'next/app'
-
 import {useVisitorData} from '@fingerprint/react'
 
 export default function Home() {
@@ -11,11 +8,7 @@ export default function Home() {
   )
 
   return (
-    <FingerprintProvider
-      apiKey="GZPxUkuA0MLMwf37sk9s"
-      region="eu"
-    >
-          <div>
+    <div>
       <button onClick={() => getData()}>
         Reload data
       </button>
@@ -23,6 +16,5 @@ export default function Home() {
       <p>Full visitor data:</p>
       <pre>{error ? error.message : JSON.stringify(data, null, 2)}</pre>
     </div>
-    </FingerprintProvider>
   )
 }
