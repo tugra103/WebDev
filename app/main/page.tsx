@@ -87,7 +87,7 @@ export default function TemplateDemo() {
 
     return (
         <div className="card">
-            <Menubar model={items} start={start} end={end} className="shadow-md rounded-md" />
+            <Menubar model={items} start={start} end={end} className="shadow-md rounded-md h-12" />
         </div>
     )
 }
