@@ -1,7 +1,8 @@
 "use client"
 import { z } from 'zod';
 
-import { useState, useNavigate } from 'react'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Card} from 'primereact/card' 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
