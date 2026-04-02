@@ -36,7 +36,7 @@ export default function SignIn() {
 
       // Attempt sign in
       signInWithEmailAndPassword(auth, validatedData.email, validatedData.password)
-      navigate('/app')
+      navigate.push('/app')
     } catch (error) {
         setErrors({ submit: 'Failed to sign in. Please try again.' })
     } finally {
