@@ -18,7 +18,7 @@ jobs:
 
       - name: İnstall React Bootstrap
         run: |
-          npm install primereact
+          npm install firebase
 
       - name: Commit and push changes
         run: |
