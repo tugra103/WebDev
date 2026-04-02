@@ -6,6 +6,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
  
 export function NavbarDefault() {
   const [openNav, setOpenNav] = React.useState(false);
