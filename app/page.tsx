@@ -21,6 +21,12 @@ export default function Home() {
   )
 
   return (
+    <FingerprintProvider
+      apiKey="GZPxUkuA0MLMwf37sk9s"
+      region="eu"
+    >
+      <Component {...pageProps} />
+    </FingerprintProvider>
     <div>
       <button onClick={() => getData()}>
         Reload data
