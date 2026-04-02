@@ -2,7 +2,7 @@
 import { z } from 'zod';
 
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { Card} from 'primereact/card' 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
@@ -24,7 +24,7 @@ export default function SignIn() {
     submit?: string
   }>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const navigate = useNavigate()
+  const navigate = useRouter()
   const { signIn } = useAuth()
 
   const handleSubmit = async (data: typeof formData) => {
