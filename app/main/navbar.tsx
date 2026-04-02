@@ -198,7 +198,7 @@ const lightStyles = `
   }
 `;
 
-export default function TemplateDemo() {
+
   const itemRenderer = (item: any) => (
     <a className="flex align-items-center p-menuitem-link" style={{ gap: "10px" }}>
       <span className={item.icon} />
@@ -256,10 +256,9 @@ export default function TemplateDemo() {
     </div>
   );
 
-  return (
+/**return (
     <div className="light-nav">
       <style>{lightStyles}</style>
       <Menubar model={items} start={start} end={end} />
     </div>
-  );
-}
+  );**/
