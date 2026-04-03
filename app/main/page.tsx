@@ -1,27 +1,20 @@
-"use client";
-
-import { useAuth } from "@/context/AuthContext";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+"use client"
+import { useAuth } from '@/context/AuthContext';
+import Navbar from "./navbar"
+import { useRouter } from 'next/navigation';
 
 export default function Page() {
-  const { user, loading } = useAuth();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!loading && !user) {
-      router.push("/login");
-    }
-  }, [user, loading]);
-
-  if (loading) return <p>Loading...</p>;
-
-  if (!user) return null;
-
+  const { user } = useAuth();
+  const navigate = useRouter()
   return (
     <div>
-      <Navbar />
-      <div>Sayfa içeriği burada</div>
-    </div>
-  );
+    {user ? (
+      <>
+        <Navbar />
+        <div>Sayfa içeriği burada</div>
+      </>
+  ) : (
+    <div>{navigate.push("/login/sign-in")} Loading</div>
+  )}
+  </div>);
 }
