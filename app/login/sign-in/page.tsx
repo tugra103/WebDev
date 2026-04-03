@@ -53,11 +53,13 @@ export default function SignIn() {
 
       // Attempt sign in
       signInWithEmailAndPassword(auth, validatedData.email, validatedData.password)
-        .then((userCredential) => {})
+        .then((userCredential) => {
+          navigate.push('/main')
+        })
         .catch((error) => {
           setErrors({ submit: error.message })
         });
-      navigate.push('/app')
+      
     } finally {
       setIsSubmitting(false)
     }
