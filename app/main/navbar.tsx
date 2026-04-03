@@ -1,6 +1,6 @@
 // navbar.tsx
 "use client";
-
+import { useAuth } from '../context/AuthContext';
 import React from "react";
 import { Menubar } from "primereact/menubar";
 import { InputText } from "primereact/inputtext";
@@ -137,7 +137,7 @@ const Navbar = () => {
       style={{ height: "30px", objectFit: "contain" }}
     />
   );
-
+  const { user } = useAuth();
   const end = (
     <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
       <div className="luxury-search">
@@ -145,7 +145,7 @@ const Navbar = () => {
       </div>
       <div className="luxury-avatar">
         <Avatar
-          image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png"
+          image={user.photoURL}
           shape="circle"
         />
       </div>
