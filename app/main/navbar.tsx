@@ -145,7 +145,7 @@ const Navbar = () => {
       </div>
       <div className="luxury-avatar">
         <Avatar
-          image={user?.photoURL ?? undefined}
+          image={user?.photoURL ?? "https://primefaces.org/cdn/primereact/images/avatar/default.png"}
           shape="circle"
         />
       </div>
