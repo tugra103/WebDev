@@ -29,10 +29,25 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">        
+        <AuthProvider>
         <FingerprintProvider apiKey="GZPxUkuA0MLMwf37sk9s" region="eu">
           {children}
         </FingerprintProvider>
+        </AuthProvider>
         </body>
+    </html>
+  );
+}
+import { AuthProvider } from "@/context/AuthContext";
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html>
+      <body>
+        <AuthProvider>
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   );
 }
