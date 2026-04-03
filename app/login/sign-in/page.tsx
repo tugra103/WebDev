@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation';
 import { Card} from 'primereact/card' 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { Button } from 'primereact/button';
 
 const auth = getAuth();
 
