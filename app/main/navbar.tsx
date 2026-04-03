@@ -98,7 +98,7 @@ const Navbar = () => {
   `;
 
   const itemRenderer = (item: any) => (
-    <a className="flex align-items-center p-menuitem-link" style={{ gap: "10px" }}>
+    <a className="flex align-items-center p-menuitem-link" style={{ gap: "10px" }} href={item.url ?? ""}>
       <span className={item.icon} />
       <span style={{ fontFamily: "Syne, sans-serif" }}>{item.label}</span>
       {item.badge && <Badge value={item.badge} />}
@@ -107,8 +107,8 @@ const Navbar = () => {
   );
 
   const items: any[] = [
-    { label: "Home", icon: "pi pi-home" },
-    { label: "Features", icon: "pi pi-star" },
+    { label: "Ana Sayfa", icon: "pi pi-home", url:"/main" },
+    { label: "Features", icon: "pi pi-star", url:"#"},
     {
       label: "Projects",
       icon: "pi pi-search",
