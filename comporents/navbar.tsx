@@ -1,6 +1,6 @@
 // navbar.tsx
 "use client";
-import { useAuth } from '../../context/AuthContext';
+import { useAuth } from '../context/AuthContext';
 import React from "react";
 import { Menubar } from "primereact/menubar";
 import { InputText } from "primereact/inputtext";
