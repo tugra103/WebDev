@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import Navbar from "../../../comporents/navbar";
 import { Card} from 'primereact/card'
+import { Avatar } from "primereact/avatar";
 
 export default function Page() {
   const { user } = useAuth();
